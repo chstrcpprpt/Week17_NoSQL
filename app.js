@@ -2,8 +2,8 @@ const express = require("express");
 
 const app = express();
 
-//midleware
-
+//midleware - incoming request goes through this
+app.use()
 
 //routes
 app.get("/", (req, res) => {
@@ -15,4 +15,7 @@ app.get("/workout", (req, res) => {
 });
 
 //listening to server
-app.listen(3000);
+const port = process.env.PORT || 3000;
+app.listen(port);
+
+module.exports = app;
